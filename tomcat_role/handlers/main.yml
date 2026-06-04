@@ -1,0 +1,7 @@
+#SPDX-License-Identifier: MI0
+# handlers file for tomcat_rol
+#
+#
+---
+- name: Restart Tomcat
+  shell: /opt/tomcat/bin/shutdown.sh && /opt/tomcat/bin/startup.sh

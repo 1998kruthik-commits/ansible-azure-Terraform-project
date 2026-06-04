@@ -1,0 +1,2 @@
+[webservers]
+vm2_client ansible_host=52.241.144.60 ansible_user=azureuser

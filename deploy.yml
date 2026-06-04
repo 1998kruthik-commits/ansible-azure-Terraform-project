@@ -1,0 +1,16 @@
+---
+- hosts: webservers
+  become: yes
+
+  tasks:
+
+    - name: Copy Amazon.war
+      copy:
+        src: /home/azureuser/Amazon.war
+        dest: /opt/tomcat/webapps/Amazon.war
+
+    - name: Restart Tomcat
+      shell: |
+        /opt/tomcat/bin/shutdown.sh || true
+        sleep 10
+        /opt/tomcat/bin/startup.sh
